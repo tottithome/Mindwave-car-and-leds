@@ -52,10 +52,10 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 ### 1. Comandos AT para o HC-05:
 
 Para configurar o HC-05 e pareá-lo com o Mindwave, siga os comandos AT abaixo. Conecte o HC-05 ao Arduino nas portas 10 (TX do HC-05 para RX do Arduino) e 11 (RX do HC-05 para TX do Arduino), para começar, rode esse programa no ide:
-
+'''arduino
 #include <SoftwareSerial.h>
 SoftwareSerial BT(11,10); //Rx/Tx
-'''ccp
+
 void setup(){
   BT.begin(38400);
   Serial.begin(9600);
@@ -64,7 +64,8 @@ void setup(){
 void loop(){
   if( BT.available() ) Serial.write( BT.read() );
   if( Serial.available() ) BT.write(Serial.read());
-}'''
+}
+'''
 
 Após rodar o código, coloque esses comando 1 por 1 no monitor serial, o monitor deverá responder ok para cada linha:
 

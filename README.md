@@ -12,8 +12,8 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 
 ## [PT-BR / ENG] Bibliotecas / Libraries
 
-- **SoftwareSerial** (para comunicação serial com o HC-05)
-- **Mindwave** (para receber os dados do Mindwave Mobile)
+- **SoftwareSerial.h**
+- **Mindwave.h** 
 
 ---
 

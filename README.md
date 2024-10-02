@@ -4,11 +4,10 @@
 
 ### Sumário / summary
 
-- [1. Descrição / Description](Descrição-/-Description)
-- [2. Versão / Version](versão-/-version)
-- [3. Bibliotecas / Libraries](bibliotecas--libraries)
-- [4. Materiais / Materials](materiais--materials)
-- [5. Como usar / How to](como-usar--how-to)
+- [1. Descrição / Description](#1-descrição--description)
+- [2. Versão / Version](#2-versão--version)
+- [3. Materiais / Materials](#3-materiais--materials)
+- [4. Como usar / How to](#4-como-usar--how-to)
   - [1. Comandos AT para o HC-05 / AT Commands for HC-05](#1-comandos-at-para-o-hc-05--at-commands-for-hc-05)
   - [2. Conexões dos Fios / Wiring](#2-conexões-dos-fios--wiring)
   - [3. Carregamento do Programa / Uploading the Program](#3-carregamento-do-programa--uploading-the-program)
@@ -17,7 +16,7 @@
 
 ---
 
-## Descrição / Description
+### 1. Descrição / Description
 
 ### [PT-BR]
 Este projeto utiliza o Mindwave Mobile 2 e um Arduino para controlar um carrinho movido a motores DC. O nível de atenção detectado pelo Mindwave determina se o carrinho se move para frente. Quando o nível de atenção atinge um valor superior a 45, o carrinho começa a andar.
@@ -27,7 +26,7 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 
  ---
 
-## Versão / Version
+### 2. Versão / Version
 
 ### [PT-BR]
 - **Arduino IDE**: 1.8.13
@@ -43,7 +42,7 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 
 ---
 
-## Materiais / Materials
+### 3. Materiais / Materials
 
 ### [PT-BR]
 - 1 Arduino UNO
@@ -73,7 +72,7 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 
 ---
 
-## Como Fazer / How to 
+### 4. Como usar / How to
 
 ### 1. Comandos AT para o HC-05 / AT Commands for HC-05:
 

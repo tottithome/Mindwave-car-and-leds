@@ -31,14 +31,14 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 ### [PT-BR]
 - **Arduino IDE**: 1.8.13
 - **Bibliotecas**:
-  - [Mindwave](https://github.com/orgicus/Mindwave.git): Acesse o link, baixe o repositório como um arquivo ZIP e coloque na IDE Arduino.
-  - SoftwareSerial: Incluída na IDE Arduino.
+  - [Mindwave.h](https://github.com/orgicus/Mindwave.git): Acesse o link, baixe o repositório como um arquivo ZIP e coloque na IDE Arduino.
+  - SoftwareSerial.h: Incluída na IDE Arduino.
 
 ### [ENG]
 - **Arduino IDE**: 1.8.13
 - **Libraries**:
-  - [Mindwave](https://github.com/orgicus/Mindwave.git): Access the link, download the repository as a ZIP file, and add it to the Arduino IDE.
-  - SoftwareSerial: Included in the Arduino IDE.
+  - [Mindwave.h](https://github.com/orgicus/Mindwave.git): Access the link, download the repository as a ZIP file, and add it to the Arduino IDE.
+  - SoftwareSerial.h: Included in the Arduino IDE.
 
 ---
 

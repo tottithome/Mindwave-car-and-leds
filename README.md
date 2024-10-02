@@ -55,7 +55,7 @@ Para configurar o HC-05 e pareá-lo com o Mindwave, siga os comandos AT abaixo. 
 
 #include <SoftwareSerial.h>
 SoftwareSerial BT(11,10); //Rx/Tx
- 
+'''ccp
 void setup(){
   BT.begin(38400);
   Serial.begin(9600);
@@ -65,7 +65,7 @@ void loop(){
   if( BT.available() ) Serial.write( BT.read() );
   if( Serial.available() ) BT.write(Serial.read());
 }
-
+'''
 Após rodar o código, coloque esses comando 1 por 1 no monitor serial, o monitor deverá responder ok para cada linha:
 
 - AT+UART=57600,0,0

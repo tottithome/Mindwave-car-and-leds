@@ -2,7 +2,7 @@
 
 ---
 
-### Navegação no Documento / Navigation in the Document
+### Sumário / summary
 
 - [1. Descrição / Description](#1-descrição--description)
 - [2. Versão / Version](#2-versão--version)

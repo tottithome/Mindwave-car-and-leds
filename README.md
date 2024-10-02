@@ -227,4 +227,79 @@ void loop() {
   mindwave.update(Serial, onMindwaveData);
 }
 
+### 3. Uploading the Program:
+
+To upload the code to the Arduino, you will need to follow these steps. The code below controls the car's motors based on the attention level detected by the Mindwave. Ensure that the RX and TX wires from the Bluetooth module are disconnected before uploading. After uploading, reconnect the wires and open the serial monitor.
+
+Here is the code you should use:
+
+```cpp
+#include <SoftwareSerial.h>
+#include <Mindwave.h>
+
+Mindwave mindwave;   // Initialize Mindwave
+
+// Pins for the L298N module to control the motors
+const int motor1Pin1 = 9; // Motor A - Pin 1
+const int motor1Pin2 = 8; // Motor A - Pin 2
+const int motor2Pin1 = 7; // Motor B - Pin 1
+const int motor2Pin2 = 6; // Motor B - Pin 2
+
+void setup() {
+  // Configure motor pins
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+  pinMode(motor2Pin1, OUTPUT);
+  pinMode(motor2Pin2, OUTPUT);
+
+  // Initialize serial communication for Mindwave
+  Serial.begin(57600);
+  delay(500); // Small delay to ensure initialization
+
+  Serial.println("Mindwave Ready!");
+}
+
+// Function to move the car forward
+void moveForward() {
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor2Pin1, HIGH);
+  digitalWrite(motor2Pin2, LOW);
+}
+
+// Function to stop the motors
+void stopMotors() {
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor2Pin1, LOW);
+  digitalWrite(motor2Pin2, LOW);
+}
+
+// Function to display the attention level and control the car
+void onMindwaveData() {
+  int attentionLevel = mindwave.attention(); // Get the attention value
+
+  if (attentionLevel == 0 || attentionLevel == 1) {
+    Serial.println("Loading..."); // Display "Loading" if the value is 0 or 1
+  } else {
+    // Display the attention level
+    Serial.print("Attention level: ");
+    Serial.println(attentionLevel);
+
+    // If the attention level is greater than 45, move the car; otherwise, stop
+    if (attentionLevel > 45) {
+      moveForward();
+      Serial.println("Moving forward");
+    } else {
+      stopMotors();
+      Serial.println("Stopped");
+    }
+  }
+}
+
+void loop() {
+  // Updates Mindwave data in the main loop
+  mindwave.update(Serial, onMindwaveData);
+}
+
  

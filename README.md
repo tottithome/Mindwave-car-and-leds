@@ -158,7 +158,7 @@ Para carregar o código no Arduino, você precisará seguir estas etapas. O cód
 
 Aqui está o código que você deve usar:
 
-```cpp
+---
 #include <SoftwareSerial.h>
 #include <Mindwave.h>
 
@@ -226,15 +226,15 @@ void loop() {
   // Atualiza os dados do Mindwave no loop principal
   mindwave.update(Serial, onMindwaveData);
 }
-'''
-
+---
+### [ENG]
 ### 3. Uploading the Program:
 
 To upload the code to the Arduino, you will need to follow these steps. The code below controls the car's motors based on the attention level detected by the Mindwave. Ensure that the RX and TX wires from the Bluetooth module are disconnected before uploading. After uploading, reconnect the wires and open the serial monitor.
 
 Here is the code you should use:
 
-```cpp
+---
 #include <SoftwareSerial.h>
 #include <Mindwave.h>
 
@@ -302,5 +302,22 @@ void loop() {
   // Updates Mindwave data in the main loop
   mindwave.update(Serial, onMindwaveData);
 }
-'''
- 
+
+---
+
+### 4. Conectar o Mindwave / Connect the Mindwave:
+### [PT-BR]
+Para conectar o Mindwave Mobile 2, ligue-o e aguarde até que ele seja pareado automaticamente com o módulo Bluetooth HC-05. Certifique-se de que o módulo Bluetooth está corretamente configurado e que o Arduino está alimentado. Você pode verificar o monitor serial para confirmar se o status da conexão está correto.
+
+### [ENG]
+To connect the Mindwave Mobile 2, power it on and wait for it to pair automatically with the HC-05 Bluetooth module. Ensure that the Bluetooth module is correctly configured and that the Arduino is powered. You can check the serial monitor to verify that the connection status is correct.
+
+---
+
+### 5. Funcionamento do Carrinho / Car Movement
+### [PT-BR]
+O carrinho começará a se mover quando o nível de atenção detectado pelo Mindwave ultrapassar 45. Esse valor pode ser ajustado para testes alterando o parâmetro condicional no código. Se a atenção cair abaixo de 45, o carrinho para.
+
+### [ENG]
+The car will start moving when the attention level detected by the Mindwave exceeds 45. This value can be adjusted for testing by changing the conditional parameter in the code. If the attention drops below 45, the car will stop.
+

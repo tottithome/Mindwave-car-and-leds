@@ -68,7 +68,7 @@ Para configurar o HC-05 e pareá-lo com o Mindwave, siga os comandos AT abaixo. 
 #include <SoftwareSerial.h>
 SoftwareSerial BT(11, 10); // Rx/Tx
 
-'
+---
 void setup() {
     BT.begin(38400);
     Serial.begin(9600);
@@ -78,7 +78,7 @@ void loop() {
     if (BT.available()) Serial.write(BT.read());
     if (Serial.available()) BT.write(Serial.read());
 }
-'
+---
 
 Após rodar o código, coloque esses comandos 1 por 1 no monitor serial; o monitor deverá responder "OK" para cada linha:
 
@@ -99,7 +99,7 @@ To configure the HC-05 and pair it with the Mindwave, follow the AT commands bel
 #include <SoftwareSerial.h>
 SoftwareSerial BT(11, 10); // Rx/Tx
 
-''' cpp
+---
 void setup() {
     BT.begin(38400);
     Serial.begin(9600);
@@ -109,7 +109,7 @@ void loop() {
     if (BT.available()) Serial.write(BT.read());
     if (Serial.available()) BT.write(Serial.read());
 }
-'''
+---
 
 After running the code, place these commands 1 by 1 on the serial monitor; the monitor should respond "OK" for each line:
 
@@ -123,5 +123,8 @@ After running the code, place these commands 1 by 1 on the serial monitor; the m
 - `AT+INQM=1,9,48`
 
 Ensure that the serial monitor is set to NL&CR and a 9600 baud rate to send commands.
+
+---
+
 
  

@@ -78,8 +78,8 @@ void loop() {
     if (BT.available()) Serial.write(BT.read());
     if (Serial.available()) BT.write(Serial.read());
 }
----
 
+---
 Após rodar o código, coloque esses comandos 1 por 1 no monitor serial; o monitor deverá responder "OK" para cada linha:
 
 - `AT+UART=57600,0,0`
@@ -109,6 +109,7 @@ void loop() {
     if (BT.available()) Serial.write(BT.read());
     if (Serial.available()) BT.write(Serial.read());
 }
+
 ---
 
 After running the code, place these commands 1 by 1 on the serial monitor; the monitor should respond "OK" for each line:

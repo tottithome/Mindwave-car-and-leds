@@ -64,8 +64,8 @@ void setup(){
 void loop(){
   if( BT.available() ) Serial.write( BT.read() );
   if( Serial.available() ) BT.write(Serial.read());
-}
-'''
+}'''
+
 Após rodar o código, coloque esses comando 1 por 1 no monitor serial, o monitor deverá responder ok para cada linha:
 
 - AT+UART=57600,0,0

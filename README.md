@@ -240,6 +240,7 @@ void loop() {
   // Atualiza os dados do Mindwave no loop principal
   mindwave.update(Serial, onMindwaveData);
 }
+
 ---
 ### [ENG]
 ### 3. Uploading the Program:

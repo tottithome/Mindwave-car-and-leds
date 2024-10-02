@@ -4,8 +4,8 @@
 
 ### Sumário / summary
 
-- [1. Descrição / Description](descrição--description)
-- [2. Versão / Version](versão--version)
+- [1. Descrição / Description](Descrição-/-Description)
+- [2. Versão / Version](versão-/-version)
 - [3. Bibliotecas / Libraries](bibliotecas--libraries)
 - [4. Materiais / Materials](materiais--materials)
 - [5. Como usar / How to](como-usar--how-to)

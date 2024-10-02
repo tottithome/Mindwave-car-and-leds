@@ -226,6 +226,7 @@ void loop() {
   // Atualiza os dados do Mindwave no loop principal
   mindwave.update(Serial, onMindwaveData);
 }
+'''
 
 ### 3. Uploading the Program:
 
@@ -301,5 +302,5 @@ void loop() {
   // Updates Mindwave data in the main loop
   mindwave.update(Serial, onMindwaveData);
 }
-
+'''
  

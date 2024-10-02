@@ -2,6 +2,21 @@
 
 ---
 
+### Navegação no Documento / Navigation in the Document
+
+- [1. Descrição / Description](#1-descrição--description)
+- [2. Versão / Version](#2-versão--version)
+- [3. Bibliotecas / Libraries](#3-bibliotecas--libraries)
+- [4. Materiais / Materials](#4-materiais--materials)
+- [5. Como usar / How to](#5-como-usar--how-to)
+  - [1. Comandos AT para o HC-05 / AT Commands for HC-05](#1-comandos-at-para-o-hc-05--at-commands-for-hc-05)
+  - [2. Conexões dos Fios / Wiring](#2-conexões-dos-fios--wiring)
+  - [3. Carregamento do Programa / Uploading the Program](#3-carregamento-do-programa--uploading-the-program)
+  - [4. Conectar o Mindwave / Connect the Mindwave](#4-conectar-o-mindwave--connect-the-mindwave)
+  - [5. Funcionamento do Carrinho / Car Movement](#5-funcionamento-do-carrinho--car-movement)
+
+---
+
 ## Descrição
 
 ### [PT-BR]

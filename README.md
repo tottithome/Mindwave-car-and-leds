@@ -169,12 +169,12 @@ Ensure that the serial monitor is set to NL&CR and a 9600 baud rate to send comm
 
 ### [PT-BR]
 Para carregar o código no Arduino, você precisará seguir estas etapas. O código abaixo controla os motores do carrinho com base no nível de atenção detectado pelo Mindwave. Certifique-se de que os fios RX e TX do módulo Bluetooth estejam desconectados antes de fazer o upload. Após o upload, reconecte os fios e inicie o monitor serial.
-Utilize o código do arquivo "CarrinhoMindwave" no Arduino IDE.
+Utilize o código do arquivo "CarrinhoMindwave.ino" no Arduino IDE.
 
 ### [ENG]
 
 To upload the code to the Arduino, you will need to follow these steps. The code below controls the car's motors based on the attention level detected by the Mindwave. Ensure that the RX and TX wires from the Bluetooth module are disconnected before uploading. After uploading, reconnect the wires and open the serial monitor.
-Use the code from the "CarrinhoMindwave" file in the Arduino IDE.
+Use the code from the "CarrinhoMindwave.ino" file in the Arduino IDE.
 
 ---
 

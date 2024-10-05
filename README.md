@@ -169,161 +169,21 @@ Ensure that the serial monitor is set to NL&CR and a 9600 baud rate to send comm
 
 ### [PT-BR]
 Para carregar o código no Arduino, você precisará seguir estas etapas. O código abaixo controla os motores do carrinho com base no nível de atenção detectado pelo Mindwave. Certifique-se de que os fios RX e TX do módulo Bluetooth estejam desconectados antes de fazer o upload. Após o upload, reconecte os fios e inicie o monitor serial.
-
-Aqui está o código que você deve usar:
-
-'''cpp
-#include <SoftwareSerial.h>
-#include <Mindwave.h>
-
-Mindwave mindwave;   // Inicializa o Mindwave
-
-// Pinos do módulo L298N para controlar os motores
-const int motor1Pin1 = 9; // Motor A - Pino 1
-const int motor1Pin2 = 8; // Motor A - Pino 2
-const int motor2Pin1 = 7; // Motor B - Pino 1
-const int motor2Pin2 = 6; // Motor B - Pino 2
-
-void setup() {
-  // Configuração dos pinos dos motores
-  pinMode(motor1Pin1, OUTPUT);
-  pinMode(motor1Pin2, OUTPUT);
-  pinMode(motor2Pin1, OUTPUT);
-  pinMode(motor2Pin2, OUTPUT);
-
-  // Inicializa a comunicação serial para o Mindwave
-  Serial.begin(57600);
-  delay(500); // Pequeno delay para garantir a inicialização
-
-  Serial.println("Mindwave Ready!");
-}
-
-// Função para mover o carrinho para frente
-void moveForward() {
-  digitalWrite(motor1Pin1, HIGH);
-  digitalWrite(motor1Pin2, LOW);
-  digitalWrite(motor2Pin1, HIGH);
-  digitalWrite(motor2Pin2, LOW);
-}
-
-// Função para parar os motores
-void stopMotors() {
-  digitalWrite(motor1Pin1, LOW);
-  digitalWrite(motor1Pin2, LOW);
-  digitalWrite(motor2Pin1, LOW);
-  digitalWrite(motor2Pin2, LOW);
-}
-
-// Função para exibir o nível de atenção e controlar o carrinho
-void onMindwaveData() {
-  int attentionLevel = mindwave.attention(); // Obter o valor de atenção
-
-  if (attentionLevel == 0 || attentionLevel == 1) {
-    Serial.println("Carregando..."); // Exibir "Carregando" se o valor for 0 ou 1
-  } else {
-    // Exibir o nível de atenção
-    Serial.print("Nível de atenção: ");
-    Serial.println(attentionLevel);
-    // Se o nível de atenção for maior que 45, mover o carrinho; caso contrário, parar
-    if (attentionLevel > 45) {
-      moveForward();
-      Serial.println("Movendo para frente");
-    } else {
-      stopMotors();
-      Serial.println("Parado");
-    }
-  }
-}
-
-void loop() {
-  // Atualiza os dados do Mindwave no loop principal
-  mindwave.update(Serial, onMindwaveData);
-}'''
+Utilize o código do arquivo "CarrinhoMindwave" no Arduino IDE.
 
 ### [ENG]
-### 3. Uploading the Program:
 
 To upload the code to the Arduino, you will need to follow these steps. The code below controls the car's motors based on the attention level detected by the Mindwave. Ensure that the RX and TX wires from the Bluetooth module are disconnected before uploading. After uploading, reconnect the wires and open the serial monitor.
-
-Here is the code you should use:
-
----
-#include <SoftwareSerial.h>
-#include <Mindwave.h>
-
-Mindwave mindwave;   // Initialize Mindwave
-
-// Pins for the L298N module to control the motors
-const int motor1Pin1 = 9; // Motor A - Pin 1
-const int motor1Pin2 = 8; // Motor A - Pin 2
-const int motor2Pin1 = 7; // Motor B - Pin 1
-const int motor2Pin2 = 6; // Motor B - Pin 2
-
-void setup() {
-  // Configure motor pins
-  pinMode(motor1Pin1, OUTPUT);
-  pinMode(motor1Pin2, OUTPUT);
-  pinMode(motor2Pin1, OUTPUT);
-  pinMode(motor2Pin2, OUTPUT);
-
-  // Initialize serial communication for Mindwave
-  Serial.begin(57600);
-  delay(500); // Small delay to ensure initialization
-
-  Serial.println("Mindwave Ready!");
-}
-
-// Function to move the car forward
-void moveForward() {
-  digitalWrite(motor1Pin1, HIGH);
-  digitalWrite(motor1Pin2, LOW);
-  digitalWrite(motor2Pin1, HIGH);
-  digitalWrite(motor2Pin2, LOW);
-}
-
-// Function to stop the motors
-void stopMotors() {
-  digitalWrite(motor1Pin1, LOW);
-  digitalWrite(motor1Pin2, LOW);
-  digitalWrite(motor2Pin1, LOW);
-  digitalWrite(motor2Pin2, LOW);
-}
-
-// Function to display the attention level and control the car
-void onMindwaveData() {
-  int attentionLevel = mindwave.attention(); // Get the attention value
-
-  if (attentionLevel == 0 || attentionLevel == 1) {
-    Serial.println("Loading..."); // Display "Loading" if the value is 0 or 1
-  } else {
-    // Display the attention level
-    Serial.print("Attention level: ");
-    Serial.println(attentionLevel);
-
-    // If the attention level is greater than 45, move the car; otherwise, stop
-    if (attentionLevel > 45) {
-      moveForward();
-      Serial.println("Moving forward");
-    } else {
-      stopMotors();
-      Serial.println("Stopped");
-    }
-  }
-}
-
-void loop() {
-  // Updates Mindwave data in the main loop
-  mindwave.update(Serial, onMindwaveData);
-}
+Use the code from the "CarrinhoMindwave" file in the Arduino IDE.
 
 ---
 
 ### 4. Conectar o Mindwave / Connect the Mindwave:
 ### [PT-BR]
-Para conectar o Mindwave Mobile 2, ligue-o e aguarde até que ele seja pareado automaticamente com o módulo Bluetooth HC-05. Certifique-se de que o módulo Bluetooth está corretamente configurado e que o Arduino está alimentado. Você pode verificar o monitor serial para confirmar se o status da conexão está correto.
+Para conectar o Mindwave Mobile 2, ligue-o e aguarde até que ele seja pareado automaticamente com o módulo Bluetooth HC-05. Certifique-se de que o módulo Bluetooth está corretamente configurado e que o Arduino está alimentado. Você pode verificar o monitor serial para confirmar se o status da conexão está correto, e o módulo irá piscar duas vezes a cada alguns segundos, isso afirmará que a conecção está pronta.
 
 ### [ENG]
-To connect the Mindwave Mobile 2, power it on and wait for it to pair automatically with the HC-05 Bluetooth module. Ensure that the Bluetooth module is correctly configured and that the Arduino is powered. You can check the serial monitor to verify that the connection status is correct.
+To connect the Mindwave Mobile 2, power it on and wait for it to pair automatically with the HC-05 Bluetooth module. Ensure that the Bluetooth module is correctly configured and that the Arduino is powered. You can check the serial monitor to verify that the connection status is correct, and the module will blink twice every few seconds, this will confirm that the connection is ready.
 
 ---
 

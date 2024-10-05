@@ -20,11 +20,13 @@
 
 ### [PT-BR]
 Este projeto utiliza o Mindwave Mobile 2 e um Arduino para controlar um carrinho movido a motores DC. O nível de atenção detectado pelo Mindwave determina se o carrinho se move para frente. Quando o nível de atenção atinge um valor superior a 45, o carrinho começa a andar.
+É importante lembrar ques os resultados variam de pessoa para pessoa, então cada pessoa pode achar uma maneira de se concentrar, como por exemplo pensar em uma palavra repetidas vezes.
 
 ### [ENG]
 This project uses the Mindwave Mobile 2 and an Arduino to control a car powered by DC motors. The attention level detected by the Mindwave determines whether the car moves forward. When the attention level exceeds 45, the car starts moving.
+It's important to remember that results vary from person to person, so each person can find a way to concentrate, such as thinking about a word repeatedly.
 
- ---
+---
 
 ### 2. Versão / Version
 

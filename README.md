@@ -77,7 +77,7 @@ This project uses the Mindwave Mobile 2 and an Arduino to control a car powered 
 ### 1. Comandos AT para o HC-05 / AT Commands for HC-05:
 
 ### [PT-BR]
-Para configurar o HC-05 e pareá-lo com o Mindwave, siga os passos abaixo. Conecte o HC-05 ao Arduino nas portas 10 (TX do HC-05 para RX do Arduino) e 11 (RX do HC-05 para TX do Arduino). Para começar, coloque o módulo HC-05 no modo AT, para poder configurá-lo, para isso desconecte o cabo usb do arduíno do computador, segure o botão presente no módulo e reconecte o cabo, assim, a luz irá piscar lentamente, após isso, rode o código do arquivo "PrepAT".
+Para configurar o HC-05 e pareá-lo com o Mindwave, siga os passos abaixo. Conecte o HC-05 ao Arduino nas portas 10 (TX do HC-05 para RX do Arduino) e 11 (RX do HC-05 para TX do Arduino). Para começar, coloque o módulo HC-05 no modo AT, para poder configurá-lo, para isso desconecte o cabo usb do arduíno do computador, segure o botão presente no módulo e reconecte o cabo, assim, a luz irá piscar lentamente, após isso, rode o código do arquivo "PrepAT.ino".
 
 
 Após rodar o código, coloque esses comandos 1 por 1 no monitor serial; o monitor deverá responder "OK" para cada linha:
@@ -95,7 +95,7 @@ Certifique-se de que o monitor serial está configurado com NL&CR e com a taxa d
 Uma vez que os comandos AT estiverem no Módulo, não é necessário entrar novamente no modo AT
 
 ### [ENG]
-To configure the HC-05 and pair it with the Mindwave, follow the steps below. Connect the HC-05 to the Arduino on ports 10 (HC-05 TX to Arduino RX) and 11 (HC-05 RX to Arduino TX). To begin, place the HC-05 module in AT mode, to be able to configure it, to do this, disconnect the Arduino USB cable from the computer, hold down the button on the module and reconnect the cable, so the light will blink slowly, then run the code from the "PrepAT" file.
+To configure the HC-05 and pair it with the Mindwave, follow the steps below. Connect the HC-05 to the Arduino on ports 10 (HC-05 TX to Arduino RX) and 11 (HC-05 RX to Arduino TX). To begin, place the HC-05 module in AT mode, to be able to configure it, to do this, disconnect the Arduino USB cable from the computer, hold down the button on the module and reconnect the cable, so the light will blink slowly, then run the code from the "PrepAT.ino" file.
 
 
 After running the code, place these commands 1 by 1 on the serial monitor; the monitor should respond "OK" for each line:

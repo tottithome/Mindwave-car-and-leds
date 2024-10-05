@@ -172,7 +172,7 @@ Para carregar o código no Arduino, você precisará seguir estas etapas. O cód
 
 Aqui está o código que você deve usar:
 
----
+'''cpp
 #include <SoftwareSerial.h>
 #include <Mindwave.h>
 
@@ -224,7 +224,6 @@ void onMindwaveData() {
     // Exibir o nível de atenção
     Serial.print("Nível de atenção: ");
     Serial.println(attentionLevel);
-
     // Se o nível de atenção for maior que 45, mover o carrinho; caso contrário, parar
     if (attentionLevel > 45) {
       moveForward();
@@ -239,9 +238,8 @@ void onMindwaveData() {
 void loop() {
   // Atualiza os dados do Mindwave no loop principal
   mindwave.update(Serial, onMindwaveData);
-}
+}'''
 
----
 ### [ENG]
 ### 3. Uploading the Program:
 
